@@ -1,20 +1,24 @@
 #
-# NOTE: This podspec is NOT to be published. It is only used as a local source!
+#  Be sure to run `pod spec lint FlutterModule.podspec' to ensure this is a
+#  valid spec and to remove all comments including this before submitting the spec.
+#
+#  To learn more about Podspec attributes see https://docs.cocoapods.org/specification.html
+#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
 
-Pod::Spec.new do |s|
-    s.name = 'FlutterModule'
-    s.version = '1.0'
-    s.description = 'flutter_show_demo_product，喵喵'
-    s.license = 'MIT'
-    s.summary = 'flutter_show_demo_product'
-    s.homepage = 'https://github.com/gunmm/flutter_show_demo_product'
-    s.authors = { 'Liya' => '924744097@qq.com' }
-    s.source = { :git => 'https://github.com/gunmm/flutter_show_demo_product.git', :branch => 'master' }
-    s.ios.deployment_target = '8.0'
+Pod::Spec.new do |spec|
 
-    s.vendored_frameworks = 'Flutter.framework', 'App.framework'
-    s.resources = 'flutter_assets'
-    s.source_files = 'Source/**/*.{h,m,c}'
-    s.preserve_paths = 'pluginspodhelper.rb', '.flutter-plugins', 'Plugins/**/*.{*}'  
+  spec.name         = "FlutterModule"
+  spec.version      = "1.0"
+  spec.description  = 'flutter_show_demo_product这是一个用来测试远程仓库管理flutter产物的仓库'
+  spec.license      = "MIT"
+  spec.summary      = "这是一个用来测试远程仓库管理flutter产物的仓库"
+
+  spec.homepage     = "https://github.com/gunmm/flutter_show_demo_product"
+  spec.author             = { "gunmm" => "924744097@qq.com" }
+  spec.source       = { :git => "https://github.com/gunmm/flutter_show_demo_product.git", :tag => "#{spec.version}" }
+  spec.ios.deployment_target = '8.0'
+  spec.vendored_frameworks = 'Flutter.framework', 'App.framework'
+  spec.resources = 'flutter_assets'
+
 end
